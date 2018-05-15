@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <style>
+        html, body {
+            margin: 0;
+            border: none;
+            padding: 0;
+        }
+        #wrapper {
+            margin: 0 auto;
+            width: 1240px;
+            height: 1753px;
+            transform-origin: top center;
+            transform: scale(0.7366, 0.7366);
+        }
+        #wrapper
+    </style>
+</head>
+<body>
+<div style="display: none;">
+    <img id="homepage" src="homepage.png"/>
+    <img id="self" src="self.png"/>
+</div>
+<div id="wrapper">
+    <canvas id="canvas" width="1240" height="1753"></canvas>
+</div>
+<script>
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = 'transparent';
+    ctx.strokeRect(0.5, 0.5, 1239, 1752);
+    ctx.strokeStyle = 'transparent';
+    ctx.strokeRect(0.5, 0.5, 1239, 876);
+    ctx.strokeRect(0.5, 876.5, 1239, 876);
+    ctx.strokeStyle = '#000000';
+    ctx.strokeRect(217.5, 129.5, 804, 619);
+    ctx.strokeRect(217.5, 1005.5, 804, 619);
+    var img1=document.getElementById("homepage");
+    ctx.drawImage(img1, 217, 129);
+    var img2=document.getElementById("self");
+    ctx.drawImage(img2, 217, 1005);
+</script>
+</body>
+</html>
